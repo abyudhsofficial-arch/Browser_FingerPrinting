@@ -25,7 +25,7 @@
 |---|---|
 | Instruction ID | BFP-001 |
 | Executor | Antigravity |
-| Status | NOT STARTED |
+| Status | CANCELLED (owner elected to skip the remaining audit and begin implementation; no completion is claimed) |
 | Execution started | Pending |
 | Execution completed | Pending |
 | Machine / OS | Pending |
@@ -116,3 +116,84 @@ Record outputs or concise redacted summaries for:
 ### 9. Final status
 
 Use one of: `COMPLETED`, `PARTIAL`, or `BLOCKED`. Do not use `COMPLETED` unless every acceptance criterion passes.
+
+
+---
+
+## BFP-002 — Phase 1: Browser API monitoring (Canvas and WebGL)
+
+**Instruction:** See `LOG.md#bfp-002`.
+
+### 1. Execution metadata
+
+| Field | Value |
+|---|---|
+| Instruction ID | BFP-002 |
+| Executor | Antigravity |
+| Status | NOT STARTED |
+| Execution started | Pending |
+| Execution completed | Pending |
+| Project root | Pending |
+| Implementation commit | Pending |
+
+### 2. Files changed
+
+| Path | Change | Reason |
+|---|---|---|
+| `BrowserFingerprintProject/detection/monitor.js` | Pending | Canvas/WebGL instrumentation |
+| `BrowserFingerprintProject/main.py` | Pending | Playwright binding, pre-navigation injection, event collection |
+| `BrowserFingerprintProject/tests/` | Pending | Deterministic tests |
+| `BrowserFingerprintProject/reports/` | Pending | Sanitized sample JSON output |
+| `BrowserFingerprintProject/README.md` | Pending | Phase 1 run instructions |
+
+### 3. Implementation notes
+
+- Instrumentation strategy:
+- Methods wrapped:
+- Event schema:
+- How original API behaviour is preserved:
+- Known browser/environment limitations:
+
+### 4. Test evidence
+
+| Test | Command | Exit code | Result / evidence |
+|---|---|---:|---|
+| Canvas instrumentation | Pending | Pending | Pending |
+| WebGL instrumentation | Pending | Pending | Pending |
+| API behaviour preservation | Pending | Pending | Pending |
+| Playwright binding/event delivery | Pending | Pending | Pending |
+| Installed Chrome smoke test | Pending | Pending | Pending |
+| JSON output validation | Pending | Pending | Pending |
+
+### 5. Privacy and safety checks
+
+- Confirm no canvas pixel data or image content is stored:
+- Confirm no cookies, credentials, form values, or page content are stored:
+- Confirm no blocking/spoofing/risk scoring was added:
+- Confirm generated reports are metadata-only:
+
+### 6. Acceptance criteria
+
+Mark each criterion PASS, FAIL, or NOT VERIFIED and attach evidence:
+
+- Canvas methods instrumented:
+- WebGL methods instrumented or unavailable with evidence:
+- Events delivered to Python:
+- Required event metadata present:
+- Original API results/errors preserved:
+- Deterministic Canvas test:
+- WebGL test or documented unavailability:
+- Chrome smoke test and safe cleanup:
+- Valid JSON report generated:
+- No out-of-scope prevention or scoring:
+
+### 7. Findings and next action
+
+- Confirmed results:
+- Failed or unverified criteria:
+- Bugs / limitations:
+- Recommended next action:
+
+### 8. Final status
+
+Use `COMPLETED`, `PARTIAL`, or `BLOCKED`. Use `COMPLETED` only when all required acceptance criteria pass with evidence.
